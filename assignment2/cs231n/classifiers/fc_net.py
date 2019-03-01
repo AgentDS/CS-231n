@@ -335,7 +335,6 @@ class FullyConnectedNet(object):
                 grads['beta%d' % l_i] = dbeta
             grads['W%d' % l_i] = dw + self.reg * self.params['W%d' % l_i]
             grads['b%d' % l_i] = db
-
         ############################################################################
         #                             END OF YOUR CODE                             #
         ############################################################################
