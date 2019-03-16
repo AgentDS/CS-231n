@@ -190,7 +190,7 @@ class FullyConnectedNet(object):
             bias_name = 'b%d' % (i + 1)
             self.params[weight_name] = np.random.normal(scale=weight_scale, size=(in_dim, out_dim))
             self.params[bias_name] = np.zeros(shape=out_dim)
-            if normalization == 'batchnorm':
+            if normalization in ['batchnorm', 'layernorm']:
                 gamma_name = 'gamma%d' % (i + 1)
                 beta_name = 'beta%d' % (i + 1)
                 self.params[gamma_name] = np.ones(shape=out_dim)
@@ -221,7 +221,7 @@ class FullyConnectedNet(object):
         if self.normalization == 'batchnorm':
             self.bn_params = [{'mode': 'train'} for i in range(self.num_layers - 1)]
         if self.normalization == 'layernorm':
-            self.bn_params = [{} for i in range(self.num_layers - 1)]
+            self.ln_params = [{} for i in range(self.num_layers - 1)]
 
         # Cast all parameters to the correct datatype
         for k, v in self.params.items():
@@ -243,9 +243,6 @@ class FullyConnectedNet(object):
         if self.normalization == 'batchnorm':
             for bn_param in self.bn_params:
                 bn_param['mode'] = mode
-        if self.normalization == 'layernorm':
-            for ln_param in self.ln_params:
-                ln_param['mode'] = mode
 
         scores = None
         ############################################################################
