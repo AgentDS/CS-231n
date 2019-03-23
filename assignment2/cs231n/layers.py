@@ -500,13 +500,14 @@ def conv_forward_naive(x, w, b, conv_param):
     x_pad = np.pad(x, ((0, 0), (0, 0), (pad, pad), (pad, pad)), mode='constant')
     H_ = int(1 + (H + 2 * pad - HH) / stride)
     W_ = int(1 + (W + 2 * pad - WW) / stride)
+
     out = np.zeros(shape=(N, F, H_, W_))
-    for n in range(N):
-        for f in range(F):
-            for h_ in range(H_):
-                for w_ in range(W_):
-                    out[n, f, h_, w_] = np.sum(
-                        w[f, :, :, :] * x_pad[n, :, h_ * stride:h_ * stride + HH, w_ * stride:w_ * stride + WW]) + b[f]
+    # avoid loop on N and C
+    for h_ in range(H_):
+        for w_ in range(W_):
+            x_partial = x_pad[:, :, h_ * stride:h_ * stride + HH, w_ * stride:w_ * stride + WW]
+            tmp = np.einsum('njkz,ijkz->ni', x_partial, w)
+            out[:, :, h_, w_] = tmp + b
 
     ###########################################################################
     #                             END OF YOUR CODE                            #
