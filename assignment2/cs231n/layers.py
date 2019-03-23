@@ -598,6 +598,7 @@ def max_pool_forward_naive(x, pool_param):
     W_ = int(1 + (W - pool_width) / stride)
 
     out = np.zeros(shape=(N, C, H_, W_))
+    # avoid loop on N and C
     for h_ in range(H_):
         for w_ in range(W_):
             x_partial = x[:, :, h_ * stride:h_ * stride + pool_height, w_ * stride:w_ * stride + pool_width]
