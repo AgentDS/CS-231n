@@ -539,23 +539,23 @@ def conv_backward_naive(dout, cache):
     F, _, HH, WW = w.shape
     _, _, H_, W_ = dout.shape
     x_pad = np.pad(x, ((0, 0), (0, 0), (pad, pad), (pad, pad)), mode='constant')
-    dw = np.zeros(shape=w.shape)
+
+    # using chain rule on computing dx, avoid loops on N and F
     dx = np.zeros(shape=x_pad.shape)
-    # using chain rule on computing dx
-    for n in range(N):
-        for f in range(F):
-            for h_ in range(H_):
-                for w_ in range(W_):
-                    dx_partial = dout[n, f, h_, w_] * w[f, :, :, :]
-                    dx[n, :, h_ * stride:h_ * stride + HH, w_ * stride:w_ * stride + WW] += dx_partial
+    w_reshape = w.reshape(F, np.prod(w.shape[1:]))
+    for h_ in range(H_):
+        for w_ in range(W_):
+            dx_partial = np.einsum('ij,ki->kj', w_reshape, dout[:, :, h_, w_])
+            dx[:, :, h_ * stride:h_ * stride + HH, w_ * stride:w_ * stride + WW] += dx_partial.reshape(N, C, HH, WW)
     dx = dx[:, :, pad:H + pad, pad:W + pad]  # remove padding
 
-    # using chain rule on computing dw
+    # using chain rule on computing dw, avoid loops on N and F
+    dw = np.zeros(shape=w.shape)
     for h_ in range(H_):
         for w_ in range(W_):
             x_partial = x_pad[:, :, h_ * stride:h_ * stride + HH, w_ * stride:w_ * stride + WW]
             x_partial = x_partial.reshape(N, np.prod(w.shape[1:]))
-            dw_partial = np.einsum('ij,ik->jk', dout[:, :, h_, w_], x_partial)  # avoid loops on N and F
+            dw_partial = np.einsum('ij,ik->jk', dout[:, :, h_, w_], x_partial)
             dw[:, :, :, :] += dw_partial.reshape(w.shape)
 
     # using chain rule on computing db
