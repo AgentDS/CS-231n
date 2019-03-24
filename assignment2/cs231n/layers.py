@@ -603,7 +603,6 @@ def max_pool_forward_naive(x, pool_param):
         for w_ in range(W_):
             x_partial = x[:, :, h_ * stride:h_ * stride + pool_height, w_ * stride:w_ * stride + pool_width]
             out[:, :, h_, w_] = np.max(x_partial, axis=(2, 3))
-
     ###########################################################################
     #                             END OF YOUR CODE                            #
     ###########################################################################
@@ -641,7 +640,6 @@ def max_pool_backward_naive(dout, cache):
                     x_partial = x[n, c, h_ * stride:h_ * stride + pool_height, w_ * stride:w_ * stride + pool_width]
                     index = np.unravel_index(np.argmax(x_partial), [pool_height, pool_width])
                     dx[n, c, h_ * stride:h_ * stride + pool_height, w_ * stride:w_ * stride + pool_width][index] = dout[n, c, h_, w_]
-
     ###########################################################################
     #                             END OF YOUR CODE                            #
     ###########################################################################
@@ -679,7 +677,13 @@ def spatial_batchnorm_forward(x, gamma, beta, bn_param):
     # vanilla version of batch normalization you implemented above.           #
     # Your implementation should be very short; ours is less than five lines. #
     ###########################################################################
-    pass
+    x_T = x.transpose((0, 2, 3, 1))
+    x_flat = x_T.reshape(-1, x.shape[1])
+
+    out_flat, cache = batchnorm_forward(x_flat, gamma, beta, bn_param)
+
+    out_T = out_flat.reshape(*x_T.shape)
+    out = out_T.transpose((0, 3, 1, 2))
     ###########################################################################
     #                             END OF YOUR CODE                            #
     ###########################################################################
@@ -709,7 +713,14 @@ def spatial_batchnorm_backward(dout, cache):
     # vanilla version of batch normalization you implemented above.           #
     # Your implementation should be very short; ours is less than five lines. #
     ###########################################################################
-    pass
+    dout_T = dout.transpose((0, 2, 3, 1))
+    dout_flat = dout_T.reshape(-1, dout.shape[1])
+
+    dx_flat, dgamma, dbeta = batchnorm_backward(dout_flat, cache)
+
+    # We need to reshape dx back to our desired shape.
+    dx_T = dx_flat.reshape(*dout_T.shape)
+    dx = dx_T.transpose((0, 3, 1, 2))
     ###########################################################################
     #                             END OF YOUR CODE                            #
     ###########################################################################
