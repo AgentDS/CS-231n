@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$USER_HOME$/Desktop/CNC Lab/.idea/CNC Lab.iml" filepath="$USER_HOME$/Desktop/CNC Lab/.idea/CNC Lab.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/CS-231n.iml" filepath="$PROJECT_DIR$/.idea/CS-231n.iml" />
+      <module fileurl="file://$USER_HOME$/Desktop/.idea/Desktop.iml" filepath="$USER_HOME$/Desktop/.idea/Desktop.iml" />
     </modules>
   </component>
 </project>
