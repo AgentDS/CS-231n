@@ -19,14 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8e92ebe-eddb-41bf-b590-12db3533d590" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment3/RNN_Captioning.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/RNN_Captioning.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment3/cs231n/classifiers/rnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/cs231n/classifiers/rnn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment3/cs231n/coco_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/cs231n/coco_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment3/cs231n/rnn_layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/cs231n/rnn_layers.py" afterDir="false" />
-    </list>
+    <list default="true" id="d8e92ebe-eddb-41bf-b590-12db3533d590" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,7 +100,7 @@
       <workItem from="1589362838291" duration="709000" />
       <workItem from="1589687136730" duration="734000" />
       <workItem from="1593098810084" duration="439000" />
-      <workItem from="1613573369545" duration="23095000" />
+      <workItem from="1613573369545" duration="23299000" />
     </task>
     <servers />
   </component>
