@@ -19,13 +19,13 @@ class CaptioningRNN(object):
     """
 
     def __init__(
-        self,
-        word_to_idx,
-        input_dim=512,
-        wordvec_dim=128,
-        hidden_dim=128,
-        cell_type="rnn",
-        dtype=np.float32,
+            self,
+            word_to_idx,
+            input_dim=512,
+            wordvec_dim=128,
+            hidden_dim=128,
+            cell_type="rnn",
+            dtype=np.float32,
     ):
         """
         Construct a new CaptioningRNN instance.
@@ -151,7 +151,28 @@ class CaptioningRNN(object):
         ############################################################################
         # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
-        pass
+        out_proj, cache_proj = affine_forward(features, W_proj, b_proj)
+        out_embed, cache_embed = word_embedding_forward(captions_in, W_embed)
+
+        # initial hidden state h0 in RNN model is the affine projection from CNN model FC-layer
+        # that is, h0 = out_proj
+        if self.cell_type == 'rnn':
+            out_hidden, cache_hidden = rnn_forward(out_embed, out_proj, Wx, Wh, b)
+        else:
+            out_hidden, cache_hidden = rnn_forward(out_embed, out_proj, Wx, Wh, b)
+
+        out_tmp_affine, cache_tmp_affine = temporal_affine_forward(out_hidden, W_vocab, b_vocab)
+        loss, dscores = temporal_softmax_loss(out_tmp_affine, captions_out, mask)
+
+        dout_hidden, grads['W_vocab'], grads['b_vocab'] = temporal_affine_backward(dscores, cache_tmp_affine)
+        if self.cell_type == 'rnn':
+            dout_embed, dout_proj, grads['Wx'], grads['Wh'], grads['b'] = rnn_backward(dout_hidden, cache_hidden)
+        else:
+            # if self.cell_type == 'lstm'
+            dout_embed, dout_proj, grads['Wx'], grads['Wh'], grads['b'] = rnn_backward(dout_hidden, cache_hidden)
+
+        grads['W_embed'] = word_embedding_backward(dout_embed, cache_embed)
+        _, grads['W_proj'], grads['b_proj'] = affine_backward(dout_proj, cache_proj)
 
         # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
         ############################################################################
@@ -219,7 +240,19 @@ class CaptioningRNN(object):
         ###########################################################################
         # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
-        pass
+        prev_h, _ = affine_forward(features, W_proj, b_proj)
+        # prev_c = np.zeros_like(prev_h)
+        captions[:, 0] = self._start
+        curr_word = np.ones((N,), dtype=np.int32) * self._start
+        if self.cell_type == 'rnn':
+            for t in range(max_length):
+                word_embed = W_embed[curr_word, :]
+                h, _ = rnn_step_forward(word_embed, prev_h, Wx, Wh, b)
+                scores = np.dot(h, W_vocab) + b_vocab
+                best_char = np.argmax(scores, axis=1)
+                captions[:, t] = best_char
+                curr_word = best_char
+                prev_h = h
 
         # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
         ############################################################################

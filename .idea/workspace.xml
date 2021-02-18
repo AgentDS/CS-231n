@@ -1,56 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d8e92ebe-eddb-41bf-b590-12db3533d590" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CS-231n.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CS-231n.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment1/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment1/cs231n/datasets/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/.ipynb_checkpoints/BatchNormalization-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/.ipynb_checkpoints/BatchNormalization-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/.ipynb_checkpoints/ConvolutionalNetworks-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/.ipynb_checkpoints/ConvolutionalNetworks-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/.ipynb_checkpoints/Dropout-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/.ipynb_checkpoints/Dropout-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/.ipynb_checkpoints/FullyConnectedNets-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/.ipynb_checkpoints/FullyConnectedNets-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/.ipynb_checkpoints/PyTorch-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/.ipynb_checkpoints/PyTorch-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/.ipynb_checkpoints/TensorFlow-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/.ipynb_checkpoints/TensorFlow-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/BatchNormalization.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/BatchNormalization.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/ConvolutionalNetworks.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/ConvolutionalNetworks.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/Dropout.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/Dropout.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/FullyConnectedNets.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/FullyConnectedNets.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/PyTorch.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/PyTorch.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/TensorFlow.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/TensorFlow.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/collectSubmission.sh" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/collectSubmission.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/cs231n/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/cs231n/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/cs231n/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/cs231n/classifiers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/cs231n/classifiers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/cs231n/classifiers/cnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/cs231n/classifiers/cnn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/cs231n/classifiers/fc_net.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/cs231n/classifiers/fc_net.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/cs231n/data_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/cs231n/data_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/cs231n/datasets/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/cs231n/datasets/get_datasets.sh" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/cs231n/datasets/get_datasets.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/cs231n/fast_layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/cs231n/fast_layers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/cs231n/gradient_check.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/cs231n/gradient_check.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/cs231n/im2col.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/cs231n/im2col.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/cs231n/im2col_cython.pyx" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/cs231n/im2col_cython.pyx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/cs231n/layer_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/cs231n/layer_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/cs231n/layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/cs231n/layers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/cs231n/optim.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/cs231n/optim.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/cs231n/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/cs231n/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/cs231n/solver.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/cs231n/solver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/cs231n/vis_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/cs231n/vis_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/frameworkpython" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/frameworkpython" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/kitten.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/kitten.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/normalization.png" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/normalization.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/puppy.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/puppy.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/start_ipython_osx.sh" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/start_ipython_osx.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/RNN_Captioning.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/RNN_Captioning.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/cs231n/classifiers/rnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/cs231n/classifiers/rnn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/cs231n/coco_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/cs231n/coco_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/cs231n/rnn_layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/cs231n/rnn_layers.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,25 +42,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JupyterTrust" id="79a3d7d8-286e-41d8-b5f6-d009f83aa2ee" />
   <component name="ProjectId" id="1b9mxnutxyogQVpxzwqe3BZ9dKc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Python" />
     <property name="two.files.diff.last.used.file" value="$USER_HOME$/Desktop/piecewise_constant_param0.m" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="lasso_ex" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -115,6 +90,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -131,24 +107,24 @@
       <workItem from="1589362838291" duration="709000" />
       <workItem from="1589687136730" duration="734000" />
       <workItem from="1593098810084" duration="439000" />
+      <workItem from="1613573369545" duration="23095000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
