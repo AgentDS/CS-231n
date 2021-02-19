@@ -288,8 +288,17 @@ def lstm_step_forward(x, prev_h, prev_c, Wx, Wh, b):
     #############################################################################
     # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
-    pass
+    N, H = prev_h.shape
+    a = np.dot(x, Wx) + np.dot(prev_h, Wh) + b
 
+    i = sigmoid(a[:, :H])
+    f = sigmoid(a[:, H:2 * H])
+    o = sigmoid(a[:, 2 * H: 3 * H])
+    g = np.tanh(a[:, 3 * H:])
+    next_c = f * prev_c + i * g
+    next_h = o * np.tanh(next_c)
+
+    cache = x, prev_h, prev_c, Wx, Wh, b, a, i, f, o, g, next_c
     # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
     ##############################################################################
     #                               END OF YOUR CODE                             #
@@ -324,7 +333,24 @@ def lstm_step_backward(dnext_h, dnext_c, cache):
     #############################################################################
     # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
-    pass
+    x, prev_h, prev_c, Wx, Wh, b, a, i, f, o, g, next_c = cache
+    tanh_next_c = np.tanh(next_c)
+    dnext_c += (1 - tanh_next_c * tanh_next_c) * o * dnext_h
+
+    # each partial gradient is (N, H)
+    da_i = dnext_c * g * i * (1 - i)
+    da_f = dnext_c * prev_c * f * (1 - f)
+    da_o = np.tanh(next_c) * dnext_h * o * (1 - o)
+    da_g = dnext_c * i * (1 - g * g)
+
+    da = np.concatenate([da_i, da_f, da_o, da_g], axis=1)  # (N, 4H)
+
+    dx = np.dot(da, Wx.T)
+    dWx = np.dot(x.T, da)
+    dWh = np.dot(prev_h.T, da)
+    dprev_h = np.dot(da, Wh.T)
+    db = np.sum(da, axis=0)
+    dprev_c = dnext_c * f
 
     # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
     ##############################################################################
