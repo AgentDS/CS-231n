@@ -159,7 +159,7 @@ class CaptioningRNN(object):
         if self.cell_type == 'rnn':
             out_hidden, cache_hidden = rnn_forward(out_embed, out_proj, Wx, Wh, b)
         else:
-            out_hidden, cache_hidden = rnn_forward(out_embed, out_proj, Wx, Wh, b)
+            out_hidden, cache_hidden = lstm_forward(out_embed, out_proj, Wx, Wh, b)
 
         out_tmp_affine, cache_tmp_affine = temporal_affine_forward(out_hidden, W_vocab, b_vocab)
         loss, dscores = temporal_softmax_loss(out_tmp_affine, captions_out, mask)
@@ -169,7 +169,7 @@ class CaptioningRNN(object):
             dout_embed, dout_proj, grads['Wx'], grads['Wh'], grads['b'] = rnn_backward(dout_hidden, cache_hidden)
         else:
             # if self.cell_type == 'lstm'
-            dout_embed, dout_proj, grads['Wx'], grads['Wh'], grads['b'] = rnn_backward(dout_hidden, cache_hidden)
+            dout_embed, dout_proj, grads['Wx'], grads['Wh'], grads['b'] = lstm_backward(dout_hidden, cache_hidden)
 
         grads['W_embed'] = word_embedding_backward(dout_embed, cache_embed)
         _, grads['W_proj'], grads['b_proj'] = affine_backward(dout_proj, cache_proj)
@@ -241,7 +241,7 @@ class CaptioningRNN(object):
         # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
         prev_h, _ = affine_forward(features, W_proj, b_proj)
-        # prev_c = np.zeros_like(prev_h)
+        prev_c = np.zeros_like(prev_h)
         captions[:, 0] = self._start
         curr_word = np.ones((N,), dtype=np.int32) * self._start
         if self.cell_type == 'rnn':
@@ -253,6 +253,14 @@ class CaptioningRNN(object):
                 captions[:, t] = best_char
                 curr_word = best_char
                 prev_h = h
+        else:
+            for t in range(max_length):
+                word_embed = W_embed[curr_word, :]
+                prev_h, prev_c, _ = lstm_step_forward(word_embed, prev_h, prev_c, Wx, Wh, b)
+                scores = np.dot(prev_h, W_vocab) + b_vocab
+                best_char = np.argmax(scores, axis=1)
+                captions[:, t] = best_char
+                curr_word = best_char
 
         # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
         ############################################################################

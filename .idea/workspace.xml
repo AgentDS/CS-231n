@@ -21,11 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d8e92ebe-eddb-41bf-b590-12db3533d590" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment3/.ipynb_checkpoints/RNN_Captioning-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/.ipynb_checkpoints/RNN_Captioning-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment3/.ipynb_checkpoints/Untitled-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/.ipynb_checkpoints/Untitled-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/.ipynb_checkpoints/LSTM_Captioning-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/.ipynb_checkpoints/LSTM_Captioning-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment3/LSTM_Captioning.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/LSTM_Captioning.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment3/RNN_Captioning.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/RNN_Captioning.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment3/Untitled.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/Untitled.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/cs231n/classifiers/rnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/cs231n/classifiers/rnn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment3/cs231n/rnn_layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/cs231n/rnn_layers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +106,7 @@
       <workItem from="1589362838291" duration="709000" />
       <workItem from="1589687136730" duration="734000" />
       <workItem from="1593098810084" duration="439000" />
-      <workItem from="1613573369545" duration="29427000" />
+      <workItem from="1613573369545" duration="32596000" />
     </task>
     <servers />
   </component>
