@@ -21,10 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d8e92ebe-eddb-41bf-b590-12db3533d590" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment3/.ipynb_checkpoints/LSTM_Captioning-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/.ipynb_checkpoints/LSTM_Captioning-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment3/LSTM_Captioning.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/LSTM_Captioning.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment3/cs231n/classifiers/rnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/cs231n/classifiers/rnn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment3/cs231n/rnn_layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/cs231n/rnn_layers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/StyleTransfer-PyTorch.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/StyleTransfer-PyTorch.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/cs231n/style_transfer_pytorch.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/cs231n/style_transfer_pytorch.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +55,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Python" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="two.files.diff.last.used.file" value="$USER_HOME$/Desktop/piecewise_constant_param0.m" />
   </component>
   <component name="RunManager">
@@ -106,7 +104,8 @@
       <workItem from="1589362838291" duration="709000" />
       <workItem from="1589687136730" duration="734000" />
       <workItem from="1593098810084" duration="439000" />
-      <workItem from="1613573369545" duration="32596000" />
+      <workItem from="1613573369545" duration="32916000" />
+      <workItem from="1614180900675" duration="7827000" />
     </task>
     <servers />
   </component>
@@ -124,6 +123,12 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="141" y="39" key="SettingsEditor" timestamp="1614238798612">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="141" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1614238798612" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
