@@ -21,8 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d8e92ebe-eddb-41bf-b590-12db3533d590" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/.ipynb_checkpoints/StyleTransfer-PyTorch-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/.ipynb_checkpoints/StyleTransfer-PyTorch-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment3/StyleTransfer-PyTorch.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/StyleTransfer-PyTorch.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment3/cs231n/style_transfer_pytorch.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/cs231n/style_transfer_pytorch.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +105,8 @@
       <workItem from="1589687136730" duration="734000" />
       <workItem from="1593098810084" duration="439000" />
       <workItem from="1613573369545" duration="32916000" />
-      <workItem from="1614180900675" duration="7827000" />
+      <workItem from="1614180900675" duration="8035000" />
+      <workItem from="1615110653898" duration="3406000" />
     </task>
     <servers />
   </component>
